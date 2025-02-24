@@ -1,0 +1,55 @@
+"All code for analysis from Phillips et al., 2019 Science (and the Erratum) are available at: https://github.com/helenphillips/GlobalEWDiversity",,,
+DOI for the GitHub repository is available in the text of the Erratum,,,
+,,,
+,,,
+,,,
+Column_Name,Datatype,Column_Description,Remarks
+rowID,numeric,Unique number for each row,
+file,string,Unique ID given to each dataset,
+Study_Name,string,"Within each dataset, a unique ID given to each study",
+Site_Name,string,"Within each study, a unique ID given to each site. Typically based on information provided by the author",
+PH,numeric,The pH of the site (when this was sampled),NAs indicate where this information was not provided/measured
+PH_Collection_Method,character,The solution used for the pH measurement,NAs indicate where no value was given/measured. 
+PH_mean,numeric,Was the pH value based on a weighted-mean across the soil profile?,yes or no value
+Organic_Carbon__percent,numeric,The percentage of organic carbon in the soil at the site (when this was sampled),NAs indicate where no value was given/measured. 
+OC_mean,numeric,Was the organic carbon value based on a weighted-mean across the soil profile?,yes or no value
+C.N_ratio,numeric,The carbon to nitrogen ration of the soil at the site (when this was sampled),NAs indicate where no value was given/measured. 
+CN_mean,string,Was the carbon to nitrogiven ratio value based on a weighted-mean across the soil profile?,yes or no value
+Sand__percent,numeric,The percentage of sand in the soil at the site (when this was sampled),NAs indicate where no value was given/measured. 
+Silt__percent,numeric,The percentage of silt in the soil at the site (when this was sampled),NAs indicate where no value was given/measured. 
+Clay__percent,numeric,The percentage of clay in the soil at the site (when this was sampled),NAs indicate where no value was given/measured. 
+sand_silt_clay_mean,string,Were the sand/silt/clay values based on a weighted-mean across the soil profile?,yes or no value
+ph_new,numeric,The pH value of the site when corrected for the collection method,NAs indicate where no value was given/measured. 
+PHIHOX,numeric,"The pH of the site, using SoilGrids data (based on the coordinates of the site)",NAs indicate where no value due to coordinates not matching to global layer
+CLYPPT,numeric,"The clay content of the site, using SoilGrids data (based on the coordinates of the site)",NAs indicate where no value due to coordinates not matching to global layer
+SLTPPT,numeric,"The silt content of the site, using SoilGrids data (based on the coordinates of the site)",NAs indicate where no value due to coordinates not matching to global layer
+SNDPPT,numeric,"The sand content of the site, using SoilGrids data (based on the coordinates of the site)",NAs indicate where no value due to coordinates not matching to global layer
+CECSOL,numeric,"The CEC of the site, using SoilGrids data (based on the coordinates of the site)",NAs indicate where no value due to coordinates not matching to global layer
+ORCDRC,numeric,"The organic carbon content of the site, using SoilGrids data (based on the coordinates of the site)",NAs indicate where no value due to coordinates not matching to global layer
+phFinal,numeric,"The final values used in the analysis for pH: using the sampled values (from ph_new) where available, and the soilgrids values where not",NAs indicate missing values - not given/measured and unable to match to global layer
+ClayFinal,numeric,"The final values used in the analysis for clay content: using the sampled values where available, and the soilgrids values where not",NAs indicate missing values - not given/measured and unable to match to global layer
+SandFinal,numeric,"The final values used in the analysis for sand content: using the sampled values where available, and the soilgrids values where not",NAs indicate missing values - not given/measured and unable to match to global layer
+SiltFinal,numeric,"The final values used in the analysis for silt content: using the sampled values where available, and the soilgrids values where not",NAs indicate missing values - not given/measured and unable to match to global layer
+OCFinal,numeric,"The final values used in the analysis for organic carbon content: using the sampled values where available, and the soilgrids values where not",NAs indicate missing values - not given/measured and unable to match to global layer
+ESA,string,The classifcation of habitat cover at the site based on the ESA CCI-LC classification scheme,
+bio10_1,numeric,CHELSA Climatologies data. The value of bio10_1 (annual mean temperature) at the site (based on the coordinates of the site),NAs indicate where no value due to coordinates not matching to global layer
+bio10_4,numeric,CHELSA Climatologies data. The value of bio10_4 (temperature seasonality) at the site (based on the coordinates of the site),NAs indicate where no value due to coordinates not matching to global layer
+bio10_7,numeric,CHELSA Climatologies data. The value of bio10_7 (temperature annual range) at the site (based on the coordinates of the site),NAs indicate where no value due to coordinates not matching to global layer
+bio10_12,numeric,CHELSA Climatologies data. The value of bio10_12 (annual precipitation) at the site (based on the coordinates of the site),NAs indicate where no value due to coordinates not matching to global layer
+bio10_15,numeric,CHELSA Climatologies data. The value of bio10_15 (precipitation seasonality) at the site (based on the coordinates of the site),NAs indicate where no value due to coordinates not matching to global layer
+elevation,numeric,"The elevation of the site, using data from J. Danielson 2011 (based on the coordinates of the site)",NAs indicate where no value due to coordinates not matching to global layer
+SnowMonths,numeric,Hall et al. data. The number of months where there is snow cover at the site (based on the coordinates of the site),
+SnowMonths_cat,character,"The number of months with snow cover put into a categorical variable, with all sites that have greater than 4 months of snow cover being grouped together",
+Aridity,numeric,Zomer et al. data. The Aridity index of the site (based on the coordinates of the site),NAs indicate where no value due to coordinates not matching to global layer
+PETyr,numeric,Zomer et al. data. The potential evapotranspiration value of the site (based on the coordinates of the site),NAs indicate where no value due to coordinates not matching to global layer
+PET_SD,numeric,Zomer et al. data. The within year standard deviation of the potential evapotranspiration of the site (based on the coordinates of the site),NAs indicate where no value due to coordinates not matching to global layer
+SpeciesRichness,numeric,The species richness of earthworms at the site,NAs indicate that this metric wasn't measured
+SpeciesRichnessUnit,string,The unit that the species richness value is in,
+Site_WetBiomass,numeric,The total wet/fresh biomass of earthworms at the site,NAs indicate that this metric wasn't measured
+Site_WetBiomassUnits,string,The unit that the biomass value is in,
+Site_Biomassm2,numeric,The total biomass per m2 (having corrected based on sampled area when necessary),NAs indicate that this metric wasn't measured
+logBiomass,numeric,The log (+1) of the total biomass per m2 at the site,NAs indicate that this metric wasn't measured
+Site_Abundance,numeric,The total abundance of earthworms at the site,NAs indicate that this metric wasn't measured
+Site_AbundanceUnits,string,The units that the abundance value is in,
+Sites_Abundancem2,numeric,The total abundance per m2 (having corrected based on sampled area when necessary),NAs indicate that this metric wasn't measured
+logAbundance,numeric,The log (+1) of the total abundance per m2 at the site,NAs indicate that this metric wasn't measured
